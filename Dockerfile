@@ -6,4 +6,4 @@ RUN apt-get install -y dotnet-sdk-7.0 git
 
 RUN git clone https://github.com/YarnSpinnerTool/YarnSpinner-Console.git
 
-RUN ./dotnet/dotnet --version
+RUN dotnet --version
