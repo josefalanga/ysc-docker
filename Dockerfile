@@ -12,4 +12,6 @@ RUN git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
 
 RUN dotnet publish -c Release --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=True
 
-RUN tree src/YarnSpinner.Console/bin/Release/netcoreapp6.0/linux-x64/publish
+RUN cp src/YarnSpinner.Console/bin/Release/netcoreapp6.0/linux-x64/publish/ysc /usr/local/bin/
+
+RUN ysc --help
