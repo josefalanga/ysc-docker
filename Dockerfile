@@ -6,6 +6,4 @@ RUN apt-get install -y dotnet-sdk-7.0 git
 
 RUN git clone https://github.com/YarnSpinnerTool/YarnSpinner-Console.git ysc-repo
 
-RUN cd ysc-repo && dotnet restore && dotnet build --no-restore --configuration Release
-
-RUN dotnet publish -c Release --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=True
+RUN cd ysc-repo && dotnet publish -c Release --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishTrimmed=True
