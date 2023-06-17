@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:kinetic
 
 RUN apt update
 
-RUN apt install -y git dotnet
+RUN sudo apt-get install -y dotnet-sdk-7.0 git
 
 RUN git clone git@github.com:YarnSpinnerTool/YarnSpinner-Console.git
 
