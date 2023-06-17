@@ -8,4 +8,6 @@ RUN git clone https://github.com/YarnSpinnerTool/YarnSpinner-Console.git /ysc-re
 
 WORKDIR /ysc-repo 
 
+RUN git checkout v2.3.1
+
 RUN dotnet publish -c Release --self-contained true -p:PublishSingleFile=true --property WarningLevel=0
