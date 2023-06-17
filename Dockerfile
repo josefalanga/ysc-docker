@@ -2,7 +2,7 @@ FROM ubuntu:kinetic
 
 RUN apt-get update
 
-RUN apt-get install -y dotnet-sdk-7.0 git
+RUN apt-get install -y dotnet-sdk-7.0 git tree
 
 RUN git clone https://github.com/YarnSpinnerTool/YarnSpinner-Console.git /ysc-repo
 
